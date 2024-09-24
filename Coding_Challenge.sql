@@ -1,3 +1,4 @@
+---------------------------------------------------CAR RENTAL SYSTEM--------------------------------------------------
 
 CREATE DATABASE CarRentalSystem;
 USE CarRentalSystem;
@@ -220,12 +221,9 @@ ORDER BY TotalSpent DESC;
 
 SELECT 
     V.vehicleID, V.make, V.model, V.year, V.dailyRate, V.status AS availability, L.leaseID, L.customerID, L.startDate, L.endDate, L.type AS leaseType
-FROM 
-    Vehicle V
-LEFT JOIN 
-    Lease L ON V.vehicleID = L.vehicleID
-ORDER BY 
-    V.vehicleID;
+FROM Vehicle V
+LEFT JOIN Lease L ON V.vehicleID = L.vehicleID
+ORDER BY V.vehicleID;
 
 
 
